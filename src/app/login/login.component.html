@@ -1,0 +1,53 @@
+<form class="container mx-auto mt-5" #loginform="ngForm" (ngSubmit)="submit(loginform)" style="max-width: 500px;border: 1px solid rgba(0, 0, 0, 0.215);padding: 20px;border-radius: 10px;">
+<div class="my-2">
+  @if(loginform.invalid && (loginform.touched||submitted)){
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    @if(loginform.controls['email'].errors?.['required']){<p>Email is required</p>
+  }
+  @if(loginform.controls['email'].errors?.['pattern']){
+    <p>Email is invalid</p>
+  }
+  @if(loginform.controls['password'].errors?.['required']){
+    <p>Password is required</p>
+  }
+  @if(loginform.controls['password'].errors?.['minlength']){
+    <p>Password must be at least 8 characters</p>
+  }
+  </div>
+}
+</div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      [(ngModel)]="data.email"
+      required
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      #email="ngModel"
+    />
+    <div id="emailHelp" class="form-text">
+      We'll never share your email with anyone else.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="data.password" 
+    required
+    minlength="8"
+    #password="ngModel"
+    />
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary btn-block btn-lg gradient-custom-4 w-100">Submit</button>
+  </div>
+</form>
+<div class="d-flex justify-content-center mt-2">
+  Don't have an account?
+  <a routerLink="/register" class="nav-link text-decoration-underline"
+    >Register</a
+  >
+</div>

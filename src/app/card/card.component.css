@@ -1,0 +1,45 @@
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #267488 !important;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+    padding: 5px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .card-img-top {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  
+  .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #4d83d4;
+    border: 1px solid #0000005d;
+    transform: scale(1.1);
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

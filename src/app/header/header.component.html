@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{ exact: true }">Products App</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/register" routerLinkActive="active-route" [routerLinkActiveOptions]="{ exact: true }">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active-route" [routerLinkActiveOptions]="{ exact: true }">Login</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center align-items-center">
+            <div>
+            <a routerLink="/cart" routerLinkActive="active-route" [routerLinkActiveOptions]="{ exact: true }" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+            @if(counter > 0){
+            <span class="position-absolute translate-middle badge rounded-pill d-none d-lg-inline" style="top: 16px;left: 92.4%;background-color: #267488;">
+            {{counter}}
+            </span>
+          }
+          </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,32 @@
+<div class="card" style="width: 18rem; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+  <span
+    [class]="
+      product.stock == 0 ? 'badge text-bg-danger' : 'badge text-bg-success'
+    "
+    style="width: 90px; height: 20px; position: absolute; top: 10px; right: 10px; border-radius: 5px;"
+  >
+    {{ product.stock == 0 ? "Out of Stock" : "In Stock" }}
+  </span>
+  <img [src]="product.images[0]" class="card-img-top" alt="Product Image" style="height: 200px; object-fit: cover;" />
+  <div class="card-body" style="padding: 15px;">
+    <h5 class="card-title" style="font-size: 1.25rem; margin-bottom: 10px;">
+      {{ product.title }}
+    </h5>
+    <p style="font-size: 1rem; color: #555;">{{ product.price }} $</p>
+    <app-rate [rating]="product.rating"></app-rate>
+  </div>
+  <div class="card-body" style="padding: 15px; text-align: center;">
+    <button
+      (click)="addToCart()"
+      class="btn"
+      style="border-radius: 30px; background-color: #267488; color: #fff; font-size: 1rem;"
+    >
+      Add to cart
+    </button>
+    <button
+    (click)="navigateToDetails(product.id)"
+    class="btn mx-2"
+    style="border-radius: 30px; background-color: #267488; color: #fff; font-size: 1rem;"
+    >show Details</button>
+  </div>
+</div>

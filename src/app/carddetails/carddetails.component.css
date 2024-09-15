@@ -1,0 +1,53 @@
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #15578655 !important;
+  }
+  
+  .img-fluid {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover .img-fluid {
+    transform: scale(1.05);
+  }
+  
+  .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  .add-btn{
+    background-color: #155786;
+    color: #fefefe;
+    border-radius: 5rem;
+    width: 7rem;
+  }
+  .back-btn{
+    background-color: #155786;
+    color: #fefefe;
+    border-radius: 5rem !important;
+    width: 7rem;
+  }
+  
+  .badge {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+      
