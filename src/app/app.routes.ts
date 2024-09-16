@@ -14,6 +14,11 @@ export const routes: Routes = [
       title: 'Home Page',
     },
     {
+      path: 'commerce',
+      component: CardlistComponent,
+      title: 'Home Page',
+    },
+    {
         path: 'login',
         component: LoginComponent,
         title: 'Login Page',
