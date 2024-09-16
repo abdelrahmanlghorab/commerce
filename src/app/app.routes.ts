@@ -13,6 +13,11 @@ export const routes: Routes = [
       component: CardlistComponent,
       title: 'Home Page',
     },
+  {
+    path: 'e-commerce',
+    component: CardlistComponent,
+    title: 'Home Page',
+  },
     {
       path: 'commerce',
       component: CardlistComponent,
@@ -44,4 +49,4 @@ export const routes: Routes = [
       title: 'Not Found Page',
     },
   ];
-  
+
