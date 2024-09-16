@@ -2,3 +2,9 @@
     color: #267488 !important;
     font-weight: bold;
 }
+@media (max-width: 575px) {
+ .badge{
+    top: 140px !important;
+    left: 45px !important;
+ }
+}
